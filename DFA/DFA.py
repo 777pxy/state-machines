@@ -82,32 +82,32 @@ class DFA:
         return self.current_state in self.F
 
 
-# Alphabet
-alphabet = ["0", "1"]
+# # Alphabet
+# alphabet = ["0", "1"]
 
-# States
-Q = ["q0", "q1"]          # q0 = even number of 1s, q1 = odd number of 1s
+# # States
+# Q = ["q0", "q1"]          # q0 = even number of 1s, q1 = odd number of 1s
 
-# Start state
-s = "q0"
+# # Start state
+# s = "q0"
 
-# Accepting states
-F = ["q0"]
+# # Accepting states
+# F = ["q0"]
 
-# Transition functions (q, symbol, q')
-transition_functions = [
-    ("q0", "0", "q0"),
-    ("q0", "1", "q1"),
-    ("q1", "0", "q1"),
-    ("q1", "1", "q0"),
-]
+# # Transition functions (q, symbol, q')
+# transition_functions = [
+#     ("q0", "0", "q0"),
+#     ("q0", "1", "q1"),
+#     ("q1", "0", "q1"),
+#     ("q1", "1", "q0"),
+# ]
 
-# Instantiate DFA
-dfa = DFA(alphabet, transition_functions, Q, F, s)
+# # Instantiate DFA
+# dfa = DFA(alphabet, transition_functions, Q, F, s)
 
-# Valid and invalid words
-valid_word = "1010"     # even number of 1s → accepted
-invalid_word = "111"    # odd number of 1s → rejected
+# # Valid and invalid words
+# valid_word = "1010"     # even number of 1s → accepted
+# invalid_word = "111"    # odd number of 1s → rejected
 
-print(dfa.validate_word(valid_word))    # True
-print(dfa.validate_word(invalid_word))  # False
+# print(dfa.validate_word(valid_word))    # True
+# print(dfa.validate_word(invalid_word))  # False
